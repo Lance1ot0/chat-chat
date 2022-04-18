@@ -10,8 +10,26 @@ body{
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+#login-box{
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+#login-box input{
+    padding: 6px 10px;
+}
+
+
+#chat-box, #chat-box + div{
+    visibility: hidden;
+}
+
 #chat-box{
-    margin-top: 10px;
+    margin-top: 50px;
     border: solid black 2px;
     border-radius: 5px;
     width: 40vw;
@@ -33,13 +51,23 @@ body{
 .text-box-left{
     width: 100%;
     display: flex;
-    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 .text-box-right{
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.username-properties {
+    color: gray;
+    margin: 4px 2px;
+    padding: 0px 10px;
+    border-radius: 10px;
+    font-size: 0.7em;
 }
 
 .message-properties {
@@ -50,11 +78,9 @@ body{
 }
 
 .my-message{
-    color: white;
     background-color: #276FBF;
 }
 
 .other-message{
-    color: white;
     background-color: #558B6E;  
 }
