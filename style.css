@@ -11,7 +11,29 @@ body{
 }
 #chatBox{
     border: solid black 1px;
-    width: 50vw;
+    width: 30vw;
     display: flex;
     flex-direction: column;
+}
+
+.text_box_left{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.text_box_right{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.my_message{
+    color: blue;
+    padding: 4px 10px;
+}
+
+.other_message{
+    color: green;
+    padding: 4px 10px;
 }
