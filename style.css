@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#chatBox{
+    border: solid black 1px;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+}
