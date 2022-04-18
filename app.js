@@ -1,17 +1,30 @@
+let body = document.querySelector('body');
 let id_user = Math.round((Date.now() * (Math.random() * 10))/1000000);
 let messageObject = {id_user:id_user, id_message: null, message:""};
 
 lastMessageID = null;
 
-let chatBox = document.querySelector('#chatBox');
+let chatBox = document.querySelector('#chat-box');
 let message = document.querySelector('#message');
-let sendBtn = document.querySelector('#sendBtn');
+let sendBtn = document.querySelector('#send-btn');
 
 sendBtn.onclick = () => {
+    send();
+};
+
+body.onkeydown = (event) =>{
+    if(event.key == "Enter")
+    {
+        send();
+    }
+}
+
+function send(){
     let textBoxLeft = document.createElement('div');
-    textBoxLeft.classList.add('text_box_left');
+    textBoxLeft.classList.add('text-box-left');
     let messageDisplay = document.createElement('span');
-    messageDisplay.classList.add('my_message');
+    messageDisplay.classList.add('message-properties');
+    messageDisplay.classList.add('my-message');
     messageDisplay.textContent = message.value;
     textBoxLeft.appendChild(messageDisplay);
     chatBox.appendChild(textBoxLeft);
@@ -19,7 +32,7 @@ sendBtn.onclick = () => {
     messageObject.id_message = Date.now();
     sendMessages();
     message.value = "";
-};
+}
 
 function sendMessages(){
     let xhr = new XMLHttpRequest();
@@ -48,18 +61,23 @@ function getMessages(){
         if(this.readyState == 4 && this.status == 200)
         {
             console.log("Le message du serveur " + this.response);
-            if(id_user != this.response.id_user && this.response.id_message != lastMessageID)
+            if(lastMessageID != null)
             {
+                if(id_user != this.response.id_user && this.response.id_message != lastMessageID)
+                {
                 lastMessageID = this.response.id_message;
 
                 let textBoxRight = document.createElement('div');
-                textBoxRight.classList.add('text_box_right');
+                textBoxRight.classList.add('text-box-right');
                 let messageDisplay = document.createElement('span');
-                messageDisplay.classList.add('other_message');
+                messageDisplay.classList.add('message-properties');
+                messageDisplay.classList.add('other-message');
                 messageDisplay.textContent = this.response.message;
                 textBoxRight.appendChild(messageDisplay);
                 chatBox.appendChild(textBoxRight);
+                }
             }
+            
         }
     };
 

@@ -8,32 +8,53 @@ body{
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
 }
-#chatBox{
-    border: solid black 1px;
-    width: 30vw;
+#chat-box{
+    margin-top: 10px;
+    border: solid black 2px;
+    border-radius: 5px;
+    width: 40vw;
+    padding: 10px 0px;
     display: flex;
     flex-direction: column;
 }
 
-.text_box_left{
+#message{
+    margin: 10px 0px;
+    padding: 4px 10px;
+}
+
+#send-btn{
+    padding: 4px 10px;
+    margin-left: 20px;
+}
+
+.text-box-left{
     width: 100%;
     display: flex;
     justify-content: flex-start;
 }
 
-.text_box_right{
+.text-box-right{
     width: 100%;
     display: flex;
     justify-content: flex-end;
 }
 
-.my_message{
-    color: blue;
+.message-properties {
+    color: white;
+    margin: 4px 10px;
     padding: 4px 10px;
+    border-radius: 10px;
 }
 
-.other_message{
-    color: green;
-    padding: 4px 10px;
+.my-message{
+    color: white;
+    background-color: #276FBF;
+}
+
+.other-message{
+    color: white;
+    background-color: #558B6E;  
 }
