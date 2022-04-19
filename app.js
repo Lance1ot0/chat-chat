@@ -66,6 +66,9 @@ function send(){
         textBoxLeft.appendChild(userNameText);
         textBoxLeft.appendChild(messageDisplay);
         chatBox.appendChild(textBoxLeft);
+        // Scroll down
+        chatBox.scrollTop = chatBox.scrollHeight;
+
         messageObject.message = message.value;
         messageObject.id_message = Date.now();
         sendMessages();
@@ -118,6 +121,8 @@ function getMessages(){
                 textBoxRight.appendChild(userNameText);
                 textBoxRight.appendChild(messageDisplay);
                 chatBox.appendChild(textBoxRight);
+                // Scroll down
+                chatBox.scrollTop = chatBox.scrollHeight;
             }
             
         }

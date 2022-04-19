@@ -12,11 +12,13 @@ body{
 }
 
 #login-box{
+    margin-top: 100px;
     width: 80vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    height: 400px;
+    height: 100px;
+    flex-direction: column;
 }
 
 #login-box input{
@@ -29,10 +31,12 @@ body{
 }
 
 #chat-box{
+    overflow: auto;
     margin-top: 50px;
     border: solid black 2px;
     border-radius: 5px;
     width: 40vw;
+    height: 400px;
     padding: 10px 0px;
     display: flex;
     flex-direction: column;
@@ -77,10 +81,14 @@ body{
     border-radius: 10px;
 }
 
-.my-message{
-    background-color: #276FBF;
+.scrollbar::-webkit-scrollbar {
+    width: 4px;
+    border-radius: 8px;
+    color: white;
+    background-color: gray; /* or add it to the track */
 }
 
-.other-message{
-    background-color: #558B6E;  
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background: #276FBF;
 }

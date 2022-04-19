@@ -1,5 +1,5 @@
 <?php
-$last_message = file_get_contents('./messages.json');
+$last_message = file_get_contents('../data/messages.json');
 
 echo $last_message;
 ?>
