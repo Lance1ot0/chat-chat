@@ -1,6 +1,10 @@
 let body = document.querySelector('body');
 
-let lastMessageRecieved = false;
+const currentDate = new Date();
+currentDate.getHours();
+
+let spanDate= document.querySelector('#span-date');
+spanDate.textContent = currentDate.toLocaleDateString("fr") + " : " + currentDate.getHours() +"h" + currentDate.getMinutes();
 
 let inputTextName = document.querySelector('#login-box input');
 let userName = null;
@@ -15,6 +19,8 @@ lastMessageID = null;
 let chatBox = document.querySelector('#chat-box');
 let message = document.querySelector('#message');
 let sendBtn = document.querySelector('#send-btn');
+
+let lastMessageRecieved = false;
 
 sendBtn.onclick = () => {
     send();
@@ -146,6 +152,6 @@ function getMessages(){
 
 }
 
-setInterval(getMessages, 1500);
+setInterval(getMessages, 500);
 
 console.log(messageObject);

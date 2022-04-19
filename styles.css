@@ -42,6 +42,20 @@ body{
     flex-direction: column;
 }
 
+#info-txt{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#span-date{
+    color: gray;
+    font-style: italic;
+    padding: 2px 0px;
+    font-size: 0.8em;
+}
+
 #message{
     margin: 10px 0px;
     padding: 4px 10px;
