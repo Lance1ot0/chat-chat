@@ -1,5 +1,7 @@
 let body = document.querySelector('body');
 
+let lastMessageRecieved = false;
+
 let inputTextName = document.querySelector('#login-box input');
 let userName = null;
 
@@ -106,23 +108,32 @@ function getMessages(){
             {
                 lastMessageID = this.response.id_message;
 
-                let textBoxRight = document.createElement('div');
-                textBoxRight.classList.add('text-box-right');
+                if(lastMessageRecieved == false)
+                {
+                    lastMessageRecieved = true;
+                    console.log("Last message not showing");
+                }
+                else
+                {
+                    let textBoxRight = document.createElement('div');
+                    textBoxRight.classList.add('text-box-right');
 
-                let userNameText = document.createElement('span');
-                userNameText.classList.add('username-properties');
-                userNameText.textContent = this.response.userName;
+                    let userNameText = document.createElement('span');
+                    userNameText.classList.add('username-properties');
+                    userNameText.textContent = this.response.userName;
 
-                let messageDisplay = document.createElement('span');
-                messageDisplay.classList.add('message-properties');
-                messageDisplay.style.backgroundColor = this.response.color;
-                messageDisplay.textContent = this.response.message;
+                    let messageDisplay = document.createElement('span');
+                    messageDisplay.classList.add('message-properties');
+                    messageDisplay.style.backgroundColor = this.response.color;
+                    messageDisplay.textContent = this.response.message;
 
-                textBoxRight.appendChild(userNameText);
-                textBoxRight.appendChild(messageDisplay);
-                chatBox.appendChild(textBoxRight);
-                // Scroll down
-                chatBox.scrollTop = chatBox.scrollHeight;
+                    textBoxRight.appendChild(userNameText);
+                    textBoxRight.appendChild(messageDisplay);
+                    chatBox.appendChild(textBoxRight);
+                    // Scroll down
+                    chatBox.scrollTop = chatBox.scrollHeight;
+                }
+                
             }
             
         }
