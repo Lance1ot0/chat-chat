@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chat-chat</title>
+    <title>chat-chat 2.0</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Radio+Canada:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>Welcome to chat-chat !</h1>
 
-    <div id="create-username">
-
-        <h2>Create your username</h1>
-        <input id="get-username" type="text" maxlength="15" placeholder="ex : Martin_23">
-        <input id="create-btn" class="submit-btn " type="button" value="Validate">
+    <div id="chat-box" class="scrollbar">
 
     </div>
+
+    <div id="user-inputs">
+
+        <input id="message-content" type="text">
+        <button id="send-message-btn" class="submit-btn" type="submit">Send</button>
+        
+    </div>
     
-    <script src="/scripts/login.js"></script>
+    <script src="/scripts/app.js"></script>
 </body>
 </html>

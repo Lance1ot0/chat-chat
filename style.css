@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #DE9151;
+    font-family: 'Radio Canada', Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 3em;
+    color: white;
+    margin-top: 60px;
+}
+
+h2 {
+    font-size: 2em;
+    color: white;
+}
+
+#create-username {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 140px;
+    justify-content: space-between;
+}
+
+#get-username {
+    width: 50%;
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+}
+
+.submit-btn {
+    padding: 6px 24px;
+    border: none;
+    border-radius: 4px;
+    background-color: #276FBF;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Radio Canada', Arial, sans-serif;
+}
+
+.submit-btn:hover {
+    background-color: white;
+    color: #DE9151;
+}
+
+#chat-box {
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    background-color: white;
+    width: 50vw;
+    height: 60vh;
+    overflow: auto;
+    margin-top: 100px;
+    padding: 6px;
+}
+
+.scrollbar::-webkit-scrollbar {
+    height: 0px;
+    width: 6px;
+    border-radius: 8px;
+    color: white;
+    background-color: gray;
+}
+
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background: #276FBF;
+}
+
+.date-div {
+    margin: 14px auto;
+    padding: 4px 0px;
+    width: 75%;
+    border-top: solid black 1px;
+    text-align: center;
+}
+
+.messages-received {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 6px;
+}
+
+.messages-send {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 6px;
+}
+
+.messages-span {
+    font-family: 'Radio Canada', Arial, sans-serif;
+    max-width: 65%;
+    margin: 4px 0px;
+    overflow: hidden;
+    background-color: #276FBF;
+    border-radius: 10px;
+    color: white;
+    padding: 8px;
+}
+
+.hour-span {
+    font-family: 'Radio Canada', Arial, sans-serif;
+    font-size: 0.6em;
+    margin: 0px 8px;
+    color: black;
+    font-style: italic;
+}
+
+.user-name-span {
+    font-family: 'Radio Canada', Arial, sans-serif;
+    margin: 2px 6px;
+    font-size: 0.8em;
+    color: grey;
+    font-style: italic;
+}
+
+#user-inputs {
+    width: 40vw;
+    height: 80px;
+    margin: 40px 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#message-content {
+    padding: 8px 4px;
+    width: 40%;
+    border-radius: 6px;
+    border: solid 2px #276FBF;
+}
+
+@media screen and (max-width: 1000px) {
+    #chat-box {
+        width: 70vw;
+        height: 70vh;
+    }
+}
