@@ -12,14 +12,23 @@ body {
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 6em;
     color: white;
     margin-top: 60px;
+    font-family: 'Amatic SC', 'Radio Canada', Arial, sans-serif;
+    border: solid white 2px;
+    padding: 10px 20px;
+}
+
+#title-chat {
+    font-size: 5em;
+    margin-top: 30px;
 }
 
 h2 {
-    font-size: 2em;
+    font-size: 3.5em;
     color: white;
+    font-family: 'Amatic SC', 'Radio Canada', Arial, sans-serif;
 }
 
 #create-username {
@@ -27,7 +36,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 140px;
+    height: 180px;
     justify-content: space-between;
 }
 
@@ -63,7 +72,7 @@ h2 {
     width: 50vw;
     height: 60vh;
     overflow: auto;
-    margin-top: 100px;
+    margin-top: 50px;
     padding: 6px;
 }
 
@@ -150,5 +159,29 @@ h2 {
     #chat-box {
         width: 70vw;
         height: 70vh;
+    }
+
+    
+    #message-content {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #title-chat {
+        font-size: 3em;
+    } 
+}
+
+
+@media screen and (max-height: 1000px) {
+    #chat-box {
+        height: 60vh;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    #title-chat {
+        font-size: 2em;
     }
 }
