@@ -9,9 +9,9 @@ $date = $message -> date;
 $time = $message -> time;
 
 $servername = "localhost";
-$database = "fh4umf1d_db_chat-chat";
-$username = "fh4umf1d_Lancelot";
-$password = "JackBoo17";
+$database = "DB_NAME";
+$username = "DB_USERNAME";
+$password = "DB_PASSWORD";
 // Create connection using musqli_connect function
 $conn = mysqli_connect($servername, $username, $password, $database);
 // Connection Check
